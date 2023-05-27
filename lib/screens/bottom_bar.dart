@@ -1,4 +1,5 @@
 //import 'package:flutter/cupertino.dart';
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
@@ -22,13 +23,21 @@ class _BottomBarState extends State<BottomBar> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 10,
-        selectedItemColor: Colors.redAccent,
+        selectedItemColor: Colors.blueGrey,
         unselectedItemColor: Colors.greenAccent,
       items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
-        BottomNavigationBarItem(icon: Icon(Icons.airplane_ticket), label: "Ticket"),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+        BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_add_filled),
+            label: "Home"),
+        BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_add_filled),
+            label: "Search"),
+        BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_add_filled),
+            label: "Tickets"),
+        BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_add_filled),
+            label: "Profile"),
       ],
       ),
     );

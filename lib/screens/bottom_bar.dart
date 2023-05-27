@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
@@ -13,7 +13,23 @@ class _BottomBarState extends State<BottomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My tickets'),
+        title: const Text('My tickets'),
+      ),
+      body: const Center(
+        child: Text(
+            "App's Body"
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 10,
+        selectedItemColor: Colors.redAccent,
+        unselectedItemColor: Colors.greenAccent,
+      items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
+        BottomNavigationBarItem(icon: Icon(Icons.airplane_ticket), label: "Ticket"),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+      ],
       ),
     );
   }

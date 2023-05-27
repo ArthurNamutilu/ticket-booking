@@ -14,7 +14,7 @@ class _BottomBarState extends State<BottomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My tickets'),
+        title:  const Text('My tickets'),
       ),
       body: const Center(
         child: Text(
